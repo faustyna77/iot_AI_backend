@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x$5m#b*x%@)b0tf766pbq@(q+b_8_wl!e49*eb_!9cfe*^zw!w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'iot-ai-backend.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://iot-ai-backend.onrender.com']
 
 # Application definition
 
