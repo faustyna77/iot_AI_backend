@@ -24,7 +24,8 @@ if "token" not in st.session_state:
 page = st.sidebar.radio("🔐 Nawigacja", ["Logowanie", "Rejestracja"])
 
 
-google_login_url = "http://localhost:8000/auth/login/google-oauth2/?next=http://localhost:8501"
+google_login_url = "https://iot-ai-backend.onrender.com/auth/login/google-oauth2/?next=https://fastinatechnology.streamlit.app"
+
 
 
 if page=="Rejestracja":
@@ -43,7 +44,7 @@ else:
                 st.success("✅ Zalogowano pomyślnie!")
                 st.rerun()
         st.markdown("### 🌐 Albo zaloguj się przez Google")
-        google_login_url = "http://localhost:8000/auth/login/google-oauth2/"
+        google_login_url = "https://iot-ai-backend.onrender.com/auth/login/google-oauth2/"
         st.markdown(f"[Zaloguj się przez Google]({google_login_url})", unsafe_allow_html=True)
 
     # Po zalogowaniu
